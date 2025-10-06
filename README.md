@@ -18,8 +18,8 @@ Right now the library supports I2C only.
     - build with Makefile or STM32CubeIDE
 
 ## How-to
-- include the correct HAL header for your MCU
-- initialize I2C with HAL and provide the handle name
+- include the correct HAL header for your MCU ([#L18](https://github.com/lunakiller/stm32_ssd1306/blob/74bcd6f1da05fe6daba53638dd523e516a2c1d4e/ssd1306/ssd1306.h#L18))
+- initialize I2C with HAL, provide the handle name and set OLED address ([#L27-L28](https://github.com/lunakiller/stm32_ssd1306/blob/74bcd6f1da05fe6daba53638dd523e516a2c1d4e/ssd1306/ssd1306.h#L27-L28))
 - include `ssd1306.h` in your project
 
 ## Fonts
