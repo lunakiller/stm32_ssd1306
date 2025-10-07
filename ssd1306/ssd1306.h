@@ -43,6 +43,7 @@ void ssd1306_Display(void);
 void ssd1306_DrawPixel(uint8_t x, uint8_t y, SSD1306_PixelState_t state);
 void ssd1306_DrawVLine(uint8_t x, SSD1306_PixelState_t state);
 void ssd1306_DrawHLine(uint8_t y, SSD1306_PixelState_t state);
+void ssd1306_DrawXBitmap(uint8_t x, uint8_t y, const unsigned char* bitmap, uint8_t w, uint8_t h, SSD1306_PixelState_t state);
 
 void ssd1306_SetCursor(uint8_t x, uint8_t y);
 void ssd1306_WriteChar(char ch, fontStyle_t font, SSD1306_PixelState_t state);
