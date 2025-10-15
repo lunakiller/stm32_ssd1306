@@ -134,7 +134,8 @@ void ssd1306_DrawPixel(uint8_t x, uint8_t y, SSD1306_PixelState_t state) {
 	// Draw in the right color
 	if(state == PIXEL_ON) {
 		SSD1306_buffer[x + (y / 8) * SSD1306_WIDTH] |= 1 << (y % 8);
-	} else {
+	}
+	else {
 		SSD1306_buffer[x + (y / 8) * SSD1306_WIDTH] &= ~(1 << (y % 8));
 	}
 }
@@ -218,16 +219,12 @@ void ssd1306_WriteChar_FixedWidth(char ch, fontStyle_t font, uint8_t fixed_width
 			for(uint32_t i = 0; i < w_range; ++i) {
 				if((chr << i) & 0x80)  {
 					ssd1306_DrawPixel(SSD1306.curr_x + i + w*8, SSD1306.curr_y + j, state);
-				} else {
-					ssd1306_DrawPixel(SSD1306.curr_x + i + w*8, SSD1306.curr_y + j, !state);
 				}
 			}
 		}
 	}
 
 	SSD1306.curr_x += g_width;
-
-//	return ch + font.FirstAsciiCode;
 }
 
 void ssd1306_WriteString(const char *str, fontStyle_t font, SSD1306_PixelState_t state) {
@@ -267,7 +264,8 @@ void ssd1306_DrawXBitmap(uint8_t x, uint8_t y, const unsigned char* bitmap, uint
 
 				if (state == PIXEL_ON) {
 						SSD1306_buffer[index] |= (1 << (yPos % 8));
-				} else {
+				}
+				else {
 						SSD1306_buffer[index] &= ~(1 << (yPos % 8));
 				}
 			}
