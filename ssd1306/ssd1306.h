@@ -4,7 +4,7 @@
  *
  *  Created on: Oct 3, 2025
  *      Author: lunakiller
- *         git: https://github.com/lunakiller/stm32_st7567a
+ *         git: https://github.com/lunakiller/stm32_ssd1306
  */
 
 #ifndef __SSD1306_H
